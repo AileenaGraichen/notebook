@@ -46,7 +46,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Notebook</Text>
+      <Text style={styles.Text}>Notebook</Text>
       <TextInput 
         title="input" 
         value={input} 
@@ -79,12 +79,19 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingTop: 40,
   },
+  Text:{
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
   TextInput: {
-    width: '90%',
+    width: '80%',
     height: 40,
+    backgroundColor: '#f9f9f9',
     borderColor: 'black',
+    borderRadius: 5,
     borderWidth: 1,
     marginTop: 10,
+    marginBottom: 10,
   },
   noteItem: {
     flexDirection: 'row',
