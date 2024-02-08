@@ -25,7 +25,7 @@ export default function App() {
       const jsonValue = await AsyncStorage.getItem('notes');
       return jsonValue != null ? setNotes(JSON.parse(jsonValue)) : null;
     } catch(e) {
-      console.log(e); // Log reading value error
+      console.log(e);
     }
   }
 
@@ -61,7 +61,7 @@ export default function App() {
           <View style={styles.noteItem}>
             <Text style={styles.noteText}>{item}</Text>
             <TouchableOpacity onPress={() => deleteNote(index)} style={styles.deleteButton}>
-              <MaterialIcons name="delete" size={24} color="red" /> {/* Using the icon as a delete button */}
+              <MaterialIcons name="delete" size={24} color="blue" />
             </TouchableOpacity>
           </View>
         )}
